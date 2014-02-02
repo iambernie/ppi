@@ -65,3 +65,34 @@ How to cross-validate
         % Hit Enter to continue... 
         ====================================================================================
 
+    Example 2 (verbose):
+        ====================================================================================
+        % python main.py -v -k 1 -s 0.99
+        % Namespace(kfoldcross=1, samplesize=0.99, test2=False, verbose=True)
+        % Protein    Answer     Prediction     Outcome 
+        % --------------------------------------------
+        % 187        nonCancer  nonCancer      True  Negative
+        % 160        nonCancer  nonCancer      True  Negative
+        % 711        nonCancer  nonCancer      True  Negative
+        % 911        nonCancer  nonCancer      True  Negative
+        % 13         cancer     cancer         True  Positive
+        % 560        nonCancer  nonCancer      True  Negative
+        % 631        nonCancer  nonCancer      True  Negative
+        % 284        nonCancer  cancer         False Positive
+        % 647        nonCancer  cancer         False Positive
+        % 481        nonCancer  cancer         False Positive
+        % 417        nonCancer  cancer         False Positive
+        % 
+        % Confusion Matrix 
+        % 
+        %   Tp  |  Fn        1    |  0  
+        % -------------    ------------------
+        %   Fp  |  Tn        4    |  6
+        %
+        % Precision: 0.200000  Recall: 1.000000  F-Measure: 0.333333
+        %
+        %
+        % Average F-Measure: 0.333333333333
+        % Hit Enter to continue...
+        ====================================================================================
+
